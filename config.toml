@@ -1,0 +1,97 @@
+# Site settings
+baseURL = "https://christianwalker.me"
+languageCode = "en-GB"
+title = "Chris Walker"
+theme = "hugo-split-theme"
+disableKinds = ["section", "taxonomy", "taxonomyTerm", "sitemap"]
+
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = ""
+
+# Copyright
+copyright = "&copy;2020 Chris Walker"
+
+[params]
+
+  # Metadata for search engines and social sharing
+  author = "Chris Walker"
+  description = "Music"
+  shareImage = "static/catavatar.jpg"
+  InstagramHandle = "colourofsound"
+
+  # Favicon
+  favicon = "favicon.ico"
+
+  # Section - Visual
+  [params.visual]
+
+    # Image
+    [params.visual.image]
+      enable = true
+      file = "cover.jpg"
+      position = "center"
+
+    # Video
+    [params.visual.video]
+      enable = false
+      mute = true
+      file = "videos/background.mp4"
+      # youtubeId = "dk9uNWPP7EA"
+
+  # Links
+  #
+  # Links List #1
+  [[params.links]]
+    [params.links.list1]
+      heading = "Connect"
+
+      [[params.links.list1.link]]
+        text = "Email"
+        url = "mailto:chriswalker@mailbox.org"
+
+      [[params.links.list1.link]]
+        text = "Instagram"
+        url = "https://www.instagram.com/colourofsound/"
+
+      [[params.links.list1.link]]
+        text = "About.Me"
+        url = "https://about.me/chris.walker"
+
+  # Links List #2
+#  [[params.links]]
+#    [params.links.list2]
+#      heading = "Skills"
+
+#      [[params.links.list2.link]]
+#        text = "Writing"
+#        url = "https://christianmwalker.medium.com"
+
+#      [[params.links.list2.link]]
+#        text = "Music"
+#        url = "https://soundcloud.com/colourofsound/sets/demo-reel"
+
+#      [[params.links.list2.link]]
+#        text = "Photography"
+#        url = "https://www.instagram.com/colourofsound/"
+
+  # Links List #3
+  [[params.links]]
+    [params.links.list3]
+      heading = "Portfolio"
+
+      [[params.links.list3.link]]
+        text = "Writing"
+        url = "https://christianmwalker.medium.com"
+
+      [[params.links.list3.link]]
+        text = "Music"
+        url = "https://soundcloud.com/colourofsound/sets/demo-reel"
+
+      [[params.links.list3.link]]
+        text = "Curriculum Vitae"
+        url = "https://www.linkedin.com/in/christianmatthewwalker/"
+
+  # The original template is released under the Creative Commons Attribution 3.0 License.
+  # Please keep the original attribution link when using for your own project.
+  # If you'd like to use the template without the attribution, you can check out
+  # the license option via the template author's website: https://onepagelove.com/split
