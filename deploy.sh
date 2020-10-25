@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # If a command fails then the deploy stops
-set -e
+set -e -x
 
 printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 
@@ -21,5 +21,12 @@ if [ -n "$*" ]; then
 fi
 git commit -m "$msg"
 
-# Push source and build repos.
-git push origin master
+# 5. Return to the project root.
+cd ../
+
+# 6-7.
+git add .
+git commit -m "$msg"
+
+# Push source, build repos *and* the public submodule to Github together.
+git push -u origin master --recurse-submodules=on-demand
