@@ -1,31 +1,33 @@
 #!/bin/sh
 
-# If a command fails then the deploy stops
+# Verbose Output
 set -v
 
 printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 
-# Build the project.
+# Build the project:
 hugo -t hugo-split-theme # if using a theme, replace with `hugo -t hugo-split-theme`
 
-# Go To Public folder
+# Go To Public folder:
 cd public
 
-# Add changes to git.
+# Add changes to site repo:
 git add .
 
-# Commit changes.
+# Commit changes to site repo:
 msg="rebuilding site $(date)"
 if [ -n "$*" ]; then
 	msg="$*"
 fi
 git commit -m "$msg"
 
-# 5. Return to the project root.
+# Return to the project root:
 cd ../
 
-# 6-7.
+# Add changes to the project repo:
 git add .
+
+# Commit changes to the project repo:
 git commit -m "$msg"
 
 # Push source, build repos *and* the public submodule to Github together.
